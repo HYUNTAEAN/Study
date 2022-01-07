@@ -164,3 +164,50 @@ Lock <br>
 - 2. 점유 대기
 - 3. 비선점
 - 4. 순환대기
+
+
+# 네트워크
+
+HTTP 요청 흐름 <br>
+
+브라우저 -> URL 값 파싱 요청 메세지 생성 -> 웹서버로 전송 <br>
+-> OS가 DNS 서버 조회하여 Host이름을 IP주소로 변환<br>
+-> 어댑터에서 수신, 패킷속에 저장 -> LAN 어댑터에게 전송 <br>
+-> 전기신호로 변환, LAN 케이블로 송출 -> 라우터에서 수신 <br>
+-> ISP에게 전달 -> 인터넷으로 들어감 -> 목적지 LAN에 도착 <br>
+-> 방화벽 검사 -> 캐시 서버에서 검사 -> 물리적 웹 서버 도착<br>
+-> 패킷 추출, 메세지 복원 -> 어플리케이션으로 전송 -> 클라이언트 <br>
+
+Http<br>
+
+평문 통신, TCP/IP 특성상 도청 가능, 통신 상대 미확인 <br>
+
+Https (+SSL)<br>
+
+Http <-> SSL, TLS <-> TCP <br>
+대칭키, 공개키 방식 <br>
+랜덤 데이터 조합으로 대칭키 생성<br>
+공개키로 대칭키를 암호화하여 서버에 전송함 <br>
+서버는 비밀키를 통해 복호화<br>
+
+CORS <br>
+
+Cross Origin Resource Sharing <br>
+도메인간의 자원 공유 <br>
+
+HTTP Header	Description<br>
+Access-Control-Allow-Origin	접근 가능한 URL 설정<br>
+Access-Control-Allow-Credentials	접근 가능한 쿠키 설정 (true, false)<br>
+Access-Control-Allow-Headers	접근 가능한 헤더 설정<br>
+Access-Control-Allow-Methods	접근 가능한 메서드 설정<br>
+
+OSI7 <br>
+
+통신 접속 -> 완료까지의 과정을 7단계로 정의한 국제 통신 표준 규약 <br>
+
+TCP/IP 4계층 <br>
+
+통신에 실제 사용되는 계층 <br>
+링크, 네트워크, 트랜스포트, 어플리케이션 <br>
+과정을 단계별로 파악하여 문제 발생시 트러블슈팅에 용이 <br>
+
