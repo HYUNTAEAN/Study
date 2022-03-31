@@ -1,0 +1,18 @@
+def solution(n, arr):
+  answer = 0
+  visited = [False for i in range(n)]
+  
+  for c in range(n):
+    if visited[c] == False:
+      dfs(n, arr, c, visited)
+      answer += 1
+  return answer
+  
+def dfs(n, arr, c, visited):
+  visited[c] = True
+  
+  for i in range(n):
+    if i != c and arr[c][i] == 1:
+      if visited[i] == False:
+        dfs(n, arr, i, visited)
+        
