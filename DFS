@@ -16,3 +16,17 @@ def dfs(n, arr, c, visited):
       if visited[i] == False:
         dfs(n, arr, i, visited)
         
+
+3라인 visited 배열에서 방문 여부를 체크한다
+
+6라인 visited[c]가 False일때 dfs가 발동
+
+12라인 visited[c]를 True로 체크하고 
+14라인에서 다른 배열과 비교한다
+
+15라인 i와 c를 비교하여 같은 노드가 아니고, 두 노드가 1이면
+16라인 거기다가 visited가 False면
+
+계속 이어지는 것이기 때문에 i를 가지고 다시 dfs가 돌아간다
+dfs가 끊어진 경우 8라인의 answer가 1 증가하여 기록된다
+
