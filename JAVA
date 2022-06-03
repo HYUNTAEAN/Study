@@ -1,0 +1,69 @@
+JVM에서 실행됨 (운영체제 노상관)
+
+객체지향언어
+
+가비지 컬렉터에 의한 자동 메모리 관리
+
+자바 클래스 파일(.java) -> 컴파일러 -> 바이트코드(.class) -> JVM영역 클래스로더 -> 실행 엔진
+
+
+jvm 구성요소
+
+1. 클래스 로더 -> 바이트 코드 로드
+2. 실행엔진 -> 인터프리터로 읽다가 어느 순간부터 JIT 컴파일러로 컴파일, 가비지컬렉터
+3. 런타임 데이터 영역 -> 클래스변수 / 객체 인스턴스 (힙영역) / 메소드, 지역변수(스택)
+
+오버로딩 : 패러미터 설정에 따라 다른 메소드로 연결시킴
+오버라이딩 : 자식 클래스가 상속받은 메소드 튜닝해서 씀
+
+static -> 해당 객체 클래스로 업그레이드 시켜서 메모리에 올림
+
+abstract -> 추상화 선언부만 있음
+인스턴스 -> 클래스 안에서 휘발성
+지역변수 -> 메소드 안에서 휘발성
+
+super. 부모 클래스 참조 변수
+super() 부모 기본생성자 호출
+
+인터페이스 : 모든 필드는 public static final / 모든 메소드는 public abstract
+
+내부 클래스 : 내부 -> 외부 접근가능 / 캡슐화 증가, 복잡성 줄임
+
+object 클래스 : 모든 클래스들의 어머니 (toString, equals(), clone() 등)
+
+String 클래스 : charAt(), compareTo(), concat(), indexOf(), trim(), toLower/UpperCase() 등
+
+StringBuffer 클래스 : append(), capacity(), delete(), insert() 등
+
+Math 클래스 : floor(), round(), ceil(), pow(), sqrt() 등
+
+Array 클래스 : binarySearch(), copyOf(), fill(), sort() 등
+
+제네릭 : T 변수이름 / 타입을 제네릭으로 설정해서 암시적으로 관리 가능
+
+
+컬렉션
+1. List : 순서있음, 중복가능, ArrayList, LinkedList, Stack, Queue 등
+2. Set : 순서없음, 중복불가 , HashSet, TreeSet
+3. Map : 키:밸류, 키만 중복불가, HashMap, TreeMap, HashTable 등
+
+스택 클래스
+empty(), peek() 상단 반환, pop() 상단 반환후 제거, push() 상단 추가, search() 인덱스 검색
+
+큐 인터페이스
+Deque<타입> 이름 = new ArrayDeque<Integer>();
+add() 맨 뒤 삽입, element 제일 앞 요소 반환, offer 맨 뒤 삽입, peek 제일 앞 요소 반환, poll 제일 앞 요소 반환 후 제거, remove 제일 앞 제거
+
+스트림 종류
+file input/output stream 파일
+ByteArray 메모리
+Piped 프로세스
+Audio 오디오
+
+가비지 컬렉터 : 동적 할당 메모리중 사용하지 않는 영역은 자동으로 해제
+
+람다 함수 : 1.8버전 추가 / (x,y) -> x < y ? x:y;
+
+Obtional<T> 클래스
+null 예외를 처리가능
+
